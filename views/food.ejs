@@ -1,0 +1,34 @@
+<%- include("./partials/header") -%>
+<div class="food-page">
+<h2>Here are all food store in your city</h2>
+<p>You can also go to map address to get exact location of specific food store</p>
+</div>
+<div class="food-content">
+<% dataArr.forEach(element => { %>
+    <!-- <h2><%= element.properties.name %></h2> -->
+    <div class="food-box">
+        <h3><%= element.properties.name %></h3>
+        <p><%= element.properties.address_line1 %></p>
+        <p><%= element.properties.address_line2 %></p>
+        <p> <span><b>Amenity : </b></span><%= element.properties.datasource.raw.amenity %></p>
+        <p> <span><b>Categories : </b></span><%= element.properties.categories %></p>
+        <button>Find on map</button>
+    </div>
+<% });%>
+</div>
+<div id="map"></div>
+
+<!-- 
+ The `defer` attribute causes the callback to execute after the full HTML
+ document has been parsed. For non-blocking uses, avoiding race conditions,
+ and consistent behavior across browsers, consider loading using Promises
+ with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+-->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFCqhFfWZCW94WJP5e1dTGarbHiPfUMGM&callback=initMap&v=weekly"
+  defer
+></script>
+
+
+
+<%- include("./partials/footer") -%>

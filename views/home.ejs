@@ -1,0 +1,43 @@
+<%- include("./partials/header") -%>
+  <div class="content">
+    <div class="welcome">
+      <h2>Welcome to Appetite suppressant</h2>
+      <p>Here you can search any food cafe/retaurant near b you</p>
+    </div>
+    <div class="search">
+      <form class="search-form" method="post" action="/">
+        <input type="text" placeholder="Search by city name..." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <div class="card-section">
+      <div class="card" style="width: 18rem;">
+        <img src="images/loc-1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Near by me </h5>
+          <p class="card-text">Here you can search for restaurant or cafe near by you</p>
+          <a href="search-on-map" class="btn btn-primary">Search</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="images/book2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Booking</h5>
+          <p class="card-text">Here you can book food in restaurant</p>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="images/feedback.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Feedback</h5>
+          <p class="card-text">Here you can share your experience of using our web</p>
+          <a href="#" class="btn btn-primary">Feedback</a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- footer section -->
+  <%- include("./partials/footer") -%>

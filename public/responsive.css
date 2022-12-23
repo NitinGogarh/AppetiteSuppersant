@@ -1,0 +1,8 @@
+@media  (max-widht:1000px)
+
+{
+   .card-section{
+    display: flex;
+    flex-direction: column;
+   } 
+}
